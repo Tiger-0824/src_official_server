@@ -6,7 +6,7 @@
     <title>Samal Rout Cup (SRC) - Season 9 | Diwali Divine Edition</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome for Premium Icons -->
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&family=Rozha+One&display=swap');
@@ -41,19 +41,19 @@
             font-family: 'Rozha One', serif;
         }
 
-        /* Royal Embossed Cards & Borders */
+        /* Royal Embossed Cards & Surfaces */
         .royal-card {
             background: linear-gradient(145deg, rgba(43, 10, 10, 0.92) 0%, rgba(18, 12, 24, 0.96) 60%, rgba(11, 18, 32, 0.98) 100%);
             border: 1px solid rgba(212, 175, 55, 0.45);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 0 18px rgba(212, 175, 55, 0.08);
         }
         .royal-card-gold {
-            background: linear-gradient(145deg, rgba(60, 14, 14, 0.92) 0%, rgba(25, 12, 18, 0.95) 100%);
-            border: 1px solid rgba(212, 175, 55, 0.65);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(255, 140, 0, 0.08);
+            background: linear-gradient(145deg, rgba(60, 14, 14, 0.94) 0%, rgba(28, 11, 18, 0.96) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.7);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.25), inset 0 0 20px rgba(255, 140, 0, 0.1);
         }
 
-        /* Custom Divine Glows */
+        /* Custom Shimmering & Neon Effects */
         .neon-border-orange {
             box-shadow: 0 0 22px rgba(255, 140, 0, 0.35), inset 0 0 15px rgba(212, 175, 55, 0.1);
         }
@@ -71,7 +71,7 @@
             to { background-position: 200% center; }
         }
 
-        /* Prabhavali Temple Arch & Rotating Aura */
+        /* Prabhavali Temple Arch & Rotations */
         .prabhavali-ring {
             animation: spinSlow 24s linear infinite;
         }
@@ -83,7 +83,7 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Light Rays Animation */
+        /* Ambient Divine Light Rays */
         .divine-rays {
             background: conic-gradient(
                 from 0deg at 50% 50%,
@@ -130,7 +130,7 @@
             100% { transform: scaleX(1.02) scaleY(1.03) rotate(-0.5deg); opacity: 0.95; }
         }
 
-        /* Smooth Scale & Flame Hover for Team Cards & Logos */
+        /* Smooth Scale & Flame Hover */
         .team-logo-container img {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -147,7 +147,7 @@
             box-shadow: 0 12px 30px rgba(255, 140, 0, 0.22), 0 0 20px rgba(212, 175, 55, 0.25);
         }
 
-        /* Tab switching active style (Royal Gold & Saffron) */
+        /* Navigation Active Pill */
         .active-tab {
             background: linear-gradient(135deg, #D4AF37 0%, #FF8C00 55%, #8B0000 100%);
             color: #FFF8E7 !important;
@@ -155,7 +155,7 @@
             border: 1px solid rgba(255, 248, 231, 0.4);
         }
 
-        /* Falling Petals Animation (Easter Egg 3 & Ambient) */
+        /* Pushpa Vrishti Petals */
         .petal {
             position: fixed;
             top: -40px;
@@ -169,7 +169,6 @@
             100% { transform: translateY(105vh) rotate(360deg) translateX(-20px); opacity: 0; }
         }
 
-        /* Temple Pillar Side Accent for Leaderboards */
         .temple-pillar-card {
             border-left: 3px double rgba(212, 175, 55, 0.6);
             border-right: 3px double rgba(212, 175, 55, 0.6);
@@ -181,36 +180,34 @@
     <!-- AMBIENT GOLDEN PARTICLES & FIREWORKS CANVAS -->
     <canvas id="deepotsav-canvas" class="fixed inset-0 pointer-events-none z-10"></canvas>
 
-    <!-- EASTER EGG 1: JAI SHRI RAM DIVINE BLESSING OVERLAY -->
+    <!-- EASTER EGG 1: JAI SHRI RAM DIVINE BLESSING TOAST -->
     <div id="divine-blessing-toast" class="fixed inset-0 z-50 pointer-events-none hidden items-center justify-center bg-black/60 backdrop-blur-xs transition-opacity duration-500">
-        <div class="text-center p-8 rounded-3xl royal-card-gold border-2 border-amber-300 shadow-[0_0_80px_rgba(255,140,0,0.8)] transform scale-100 animate-bounce">
+        <div class="text-center p-8 rounded-3xl royal-card-gold border-2 border-amber-300 shadow-[0_0_80px_rgba(255,140,0,0.85)] transform scale-100 animate-bounce">
             <p class="font-hindi text-5xl md:text-7xl text-amber-300 drop-shadow-[0_0_25px_rgba(255,140,0,0.9)]">।। जय श्री राम ।।</p>
             <p class="font-royal text-sm md:text-base text-amber-100 tracking-[0.25em] uppercase mt-3">Surya Vamsha Aura Activated • Victory & Dharma</p>
         </div>
     </div>
 
     <!-- TOP MARIGOLD TORAN GARLAND -->
-    <div class="relative z-20 w-full overflow-hidden h-5 bg-gradient-to-r from-red-950 via-amber-900/60 to-red-950 border-b border-amber-500/40 flex items-center justify-around">
+    <div class="relative z-20 w-full overflow-hidden h-5 bg-gradient-to-r from-red-950 via-amber-900/60 to-red-950 border-b border-amber-500/40 flex items-center justify-around select-none">
         <span class="text-xs">🌼</span><span class="text-xs">🌺</span><span class="text-xs">🌼</span><span class="text-xs">🌺</span>
         <span class="text-xs">🌼</span><span class="text-xs">🌺</span><span class="text-xs">🌼</span><span class="text-xs">🌺</span>
         <span class="text-xs">🌼</span><span class="text-xs">🌺</span><span class="text-xs">🌼</span><span class="text-xs">🌺</span>
         <span class="text-xs hidden sm:inline">🌼</span><span class="text-xs hidden sm:inline">🌺</span><span class="text-xs hidden sm:inline">🌼</span><span class="text-xs hidden sm:inline">🌺</span>
     </div>
 
-    <!-- HEADER / HERO SECTION (AYODHYA DEEPOTSAV EDITION) -->
-    <header class="relative overflow-hidden bg-gradient-to-b from-[#2B0A0A] via-[#1b0914] to-[#0B1220] border-b-2 border-amber-500/40 pt-7 pb-7 px-4 text-center z-20">
+    <!-- HEADER / HERO SECTION -->
+    <header class="relative overflow-hidden bg-gradient-to-b from-[#2B0A0A] via-[#1b0914] to-[#0B1220] border-b-2 border-amber-500/40 pt-7 pb-8 px-4 text-center z-20">
         
-        <!-- Rotating Divine Light Rays Behind Ramji & Logo -->
+        <!-- Rotating Divine Light Rays -->
         <div class="divine-rays absolute -top-48 left-1/2 -translate-x-1/2 w-[650px] h-[650px] rounded-full pointer-events-none opacity-60"></div>
 
-        <!-- Optional diwali/ram-darbar.png support + Built-in Sacred Ram Darbar & Ayodhya Palace Silhouette Watermark (15-20% Opacity) -->
+        <!-- Optional diwali/ram-darbar.png + Mandir Silhouette Watermark -->
         <img src="diwali/ram-darbar.png" alt="" onerror="this.style.display='none'" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none mix-blend-screen">
         <div class="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none opacity-20">
             <svg viewBox="0 0 1200 320" class="w-full max-w-5xl h-auto fill-amber-400/80">
-                <!-- Ayodhya Mandir Shikharas & Royal Domes Silhouette -->
                 <path d="M0,320 L0,260 L80,260 L80,220 L110,180 L140,220 L140,260 L220,260 L220,200 L260,140 L300,200 L300,260 L380,260 L380,170 L430,90 L480,170 L480,260 L520,260 L520,140 L600,20 L680,140 L680,260 L720,260 L720,170 L770,90 L820,170 L820,260 L900,260 L900,200 L940,140 L980,200 L980,260 L1060,260 L1060,220 L1090,180 L1120,220 L1120,260 L1200,260 L1200,320 Z"/>
                 <circle cx="600" cy="12" r="8" fill="#FFD700"/>
-                <!-- Sacred Kodanda Bow & Arrow Motif Behind Title -->
                 <path d="M460,120 Q600,10 740,120" stroke="#FFD700" stroke-width="5" fill="none"/>
                 <line x1="600" y1="145" x2="600" y2="25" stroke="#FFD700" stroke-width="4"/>
             </svg>
@@ -226,10 +223,9 @@
             </span>
         </div>
         
-        <!-- Tournament Official Logo inside Royal Golden Prabhavali Temple Frame (Easter Egg 1 Trigger: Tap 7 Times) -->
+        <!-- Tournament Official Logo inside Royal Golden Prabhavali Temple Frame -->
         <div class="relative z-10 flex flex-col items-center justify-center mb-3">
             <div id="logo-temple-frame" onclick="handleLogoTap()" title="Tap 7 times for Ayodhya Shankh Naad Blessing" class="relative w-28 h-28 md:w-32 md:h-32 flex items-center justify-center cursor-pointer select-none group">
-                <!-- Rotating Golden Prabhavali Aura -->
                 <svg viewBox="0 0 200 200" class="prabhavali-ring absolute inset-0 w-full h-full pointer-events-none">
                     <defs>
                         <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -240,7 +236,6 @@
                     </defs>
                     <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="6 4"/>
                     <circle cx="100" cy="100" r="84" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="2 8"/>
-                    <!-- 12 Solar Rays on Arch -->
                     <g fill="#FFD700" opacity="0.85">
                         <polygon points="100,2 96,14 104,14"/><polygon points="100,198 96,186 104,186"/>
                         <polygon points="2,100 14,96 14,104"/><polygon points="198,100 186,96 186,104"/>
@@ -249,7 +244,6 @@
                     </g>
                 </svg>
 
-                <!-- Marigold Flower Ring -->
                 <div class="w-22 h-22 md:w-25 md:h-25 rounded-full p-1 bg-gradient-to-tr from-amber-600 via-yellow-400 to-orange-500 shadow-[0_0_35px_rgba(255,140,0,0.65)] flex items-center justify-center">
                     <div class="w-full h-full rounded-full bg-[#1a0707] border-2 border-amber-300/80 flex items-center justify-center overflow-hidden aspect-square">
                         <img src="logo.png" alt="SRC Tournament Logo" class="w-full h-full object-cover drop-shadow-[0_0_10px_rgba(212,175,55,0.8)] group-hover:scale-105 transition-transform">
@@ -278,7 +272,7 @@
             </div>
         </div>
 
-        <!-- Festival Hierarchy Typography (Easter Egg 3 Trigger: Long Press Title for Petal Shower) -->
+        <!-- Festival Typography Hierarchy -->
         <p class="font-hindi text-2xl md:text-3xl text-amber-300 tracking-wider drop-shadow-[0_2px_10px_rgba(255,140,0,0.6)]">
             ।। शुभ दीपावली ।।
         </p>
@@ -293,12 +287,11 @@
             The Festival of Victory • SRC Season 9
         </p>
 
-        <!-- Tournament Overview Passive Info Badges (Royal Maroon + Embossed Gold + Replaced Sacred Icons) -->
+        <!-- Tournament Overview Cards -->
         <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-4xl mx-auto mt-6 text-xs md:text-sm font-semibold overflow-hidden">
-            <!-- Date & Day: Golden Temple Bell -->
             <div class="royal-card rounded-xl p-3 flex items-center justify-start gap-3 relative overflow-hidden group">
                 <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-400/40 flex items-center justify-center text-amber-300 text-lg shrink-0 shadow-[0_0_12px_rgba(212,175,55,0.25)]">
-                    <i class="fa-solid fa-bell group-hover:animate-swing"></i>
+                    <i class="fa-solid fa-bell"></i>
                 </div>
                 <div class="text-left">
                     <p class="text-[10px] text-amber-400/80 uppercase leading-none font-cyber">Date & Day</p>
@@ -306,7 +299,6 @@
                 </div>
             </div>
 
-            <!-- Venue Ground: Glowing Diya -->
             <div class="royal-card rounded-xl p-3 flex items-center justify-start gap-3 relative overflow-hidden">
                 <div class="w-9 h-9 rounded-lg bg-orange-500/15 border border-orange-400/40 flex items-center justify-center text-orange-300 text-lg shrink-0 shadow-[0_0_12px_rgba(255,140,0,0.25)]">
                     <i class="fa-solid fa-fire-flame-curved diya-flame"></i>
@@ -317,7 +309,6 @@
                 </div>
             </div>
 
-            <!-- Match Format: Royal Bow & Arrow (Kodanda) -->
             <div class="royal-card rounded-xl p-3 flex items-center justify-start gap-3 relative overflow-hidden">
                 <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-400/40 flex items-center justify-center text-amber-300 shrink-0 shadow-[0_0_12px_rgba(212,175,55,0.25)]">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -333,7 +324,6 @@
                 </div>
             </div>
 
-            <!-- Entry Fee: Royal Treasure Pot (Kalash) -->
             <div class="royal-card rounded-xl p-3 flex items-center justify-start gap-3 relative overflow-hidden">
                 <div class="w-9 h-9 rounded-lg bg-yellow-500/15 border border-yellow-400/40 flex items-center justify-center text-yellow-300 text-lg shrink-0 shadow-[0_0_12px_rgba(234,179,8,0.25)]">
                     <i class="fa-solid fa-coins"></i>
@@ -345,7 +335,7 @@
             </div>
         </div>
 
-        <!-- QUICK ACTION PORTALS (EMBOSSED GOLD BORDERS & ROYAL DIYA ACCENTS) -->
+        <!-- QUICK ACTION PORTALS -->
         <div class="relative z-10 mt-7 max-w-5xl mx-auto px-2">
             <div class="flex items-center justify-center gap-2 mb-3">
                 <span class="h-px w-10 bg-amber-500/50"></span>
@@ -354,7 +344,6 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                <!-- 1. History of the Tournament (Deep Crimson & Gold) -->
                 <a href="https://tiger-0824.github.io/src_history/" target="_blank" class="w-full inline-flex items-center justify-between bg-gradient-to-r from-[#6b0909] via-[#8B0000] to-[#b45309] border border-amber-300/60 border-b-4 border-amber-950 active:border-b active:translate-y-1 font-cyber font-bold text-[11px] tracking-wider uppercase text-amber-50 py-3 px-3.5 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-[0_0_20px_rgba(139,0,0,0.5)] hover:shadow-[0_0_28px_rgba(212,175,55,0.6)] group cursor-pointer">
                     <div class="flex items-center gap-2 text-left">
                         <i class="fa-solid fa-clock-rotate-left text-sm group-hover:-rotate-45 transition-transform text-amber-300"></i> 
@@ -363,7 +352,6 @@
                     <span class="text-[9px] bg-black/45 border border-amber-300/40 text-amber-200 px-2 py-0.5 rounded font-black tracking-wider uppercase">Explore ↗</span>
                 </a>
 
-                <!-- 2. Player Auction Hub (Saffron & Royal Gold) -->
                 <a href="https://tiger-0824.github.io/src_auction/" target="_blank" class="w-full inline-flex items-center justify-between bg-gradient-to-r from-[#b45309] via-[#d97706] to-[#FF8C00] border border-amber-200/70 border-b-4 border-amber-950 active:border-b active:translate-y-1 font-cyber font-bold text-[11px] tracking-wider uppercase text-white py-3 px-3.5 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-[0_0_20px_rgba(255,140,0,0.4)] hover:shadow-[0_0_30px_rgba(255,179,71,0.75)] group cursor-pointer">
                     <div class="flex items-center gap-2 text-left">
                         <i class="fa-solid fa-gavel text-sm group-hover:-rotate-12 transition-transform text-amber-100"></i> 
@@ -372,7 +360,6 @@
                     <span class="text-[9px] bg-black/45 border border-amber-200/40 text-amber-100 px-2 py-0.5 rounded font-black tracking-wider uppercase">Enter 🔨</span>
                 </a>
 
-                <!-- 3. Media Gallery (Midnight Royal & Gold) -->
                 <a href="https://tiger-0824.github.io/src_gallery/" target="_blank" class="w-full inline-flex items-center justify-between bg-gradient-to-r from-[#0B1220] via-[#1e293b] to-[#78350f] border border-amber-400/60 border-b-4 border-slate-950 active:border-b active:translate-y-1 font-cyber font-bold text-[11px] tracking-wider uppercase text-amber-100 py-3 px-3.5 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-[0_0_20px_rgba(212,175,55,0.25)] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] group cursor-pointer">
                     <div class="flex items-center gap-2 text-left">
                         <i class="fa-solid fa-photo-film text-sm group-hover:scale-110 transition-transform text-amber-300"></i> 
@@ -381,7 +368,6 @@
                     <span class="text-[9px] bg-black/45 border border-amber-300/40 text-amber-200 px-2 py-0.5 rounded font-black tracking-wider uppercase">View ↗</span>
                 </a>
 
-                <!-- 4. Official Rulebook (Royal Maroon & Saffron) -->
                 <a href="https://tiger-0824.github.io/SRC_rulebook/" target="_blank" class="w-full inline-flex items-center justify-between bg-gradient-to-r from-[#4a0e2e] via-[#8B0000] to-[#9a3412] border border-amber-300/60 border-b-4 border-red-950 active:border-b active:translate-y-1 font-cyber font-bold text-[11px] tracking-wider uppercase text-amber-50 py-3 px-3.5 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-[0_0_20px_rgba(139,0,0,0.45)] hover:shadow-[0_0_30px_rgba(255,140,0,0.65)] group cursor-pointer">
                     <div class="flex items-center gap-2 text-left">
                         <i class="fa-solid fa-book-open text-sm group-hover:scale-110 transition-transform text-amber-300"></i> 
@@ -392,36 +378,78 @@
             </div>
         </div>
 
-        <!-- Tournament Poster Modal Trigger -->
-        <div class="relative z-10 mt-4 max-w-5xl mx-auto px-2">
-            <button onclick="openPosterModal()" class="w-full inline-flex items-center justify-between royal-card hover:border-amber-300 rounded-xl p-3 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_28px_rgba(255,140,0,0.4)] group cursor-pointer">
-                <div class="flex items-center gap-3 text-left">
-                    <div class="w-9 h-9 bg-amber-500/15 border border-amber-400/50 rounded-lg flex items-center justify-center text-amber-300 text-base shadow-sm">
-                        <i class="fa-solid fa-scroll"></i>
+        <!-- HIGH-IMPACT TOURNAMENT POSTER & SHAHI FARMAN SHOWCASE CARD -->
+        <div class="relative z-10 mt-7 max-w-5xl mx-auto px-2">
+            <div onclick="openPosterModal()" class="group relative royal-card-gold rounded-2xl p-4 sm:p-5 cursor-pointer overflow-hidden border-2 border-amber-400/80 shadow-[0_0_35px_rgba(212,175,55,0.4)] hover:shadow-[0_0_55px_rgba(255,140,0,0.65)] transition-all duration-300 hover:-translate-y-1">
+                
+                <!-- Dynamic Sweeping Light Beam -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                
+                <!-- Corner Diya & Shubh-Labh Blessings -->
+                <div class="absolute top-2.5 left-3 flex items-center gap-1.5 text-xs opacity-90 select-none">
+                    <span class="text-amber-400">🪔</span>
+                    <span class="text-[10px] font-hindi text-amber-300">शुभ</span>
+                </div>
+                <div class="absolute top-2.5 right-3 flex items-center gap-1.5 text-xs opacity-90 select-none">
+                    <span class="text-[10px] font-hindi text-amber-300">लाभ</span>
+                    <span class="text-amber-400">🪔</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-4 sm:gap-6 mt-3 md:mt-0">
+                    <!-- Live Poster Thumbnail with Ornate Border & Zoom -->
+                    <div class="relative shrink-0 w-full md:w-48 h-40 md:h-44 rounded-xl overflow-hidden bg-black/70 border-2 border-amber-300/80 p-1 shadow-[0_0_25px_rgba(212,175,55,0.4)] group-hover:border-amber-200 transition-colors">
+                        <img src="banner.png" alt="SRC Season 9 Tournament Poster" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Overlay Expand Badge -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end justify-center pb-2.5">
+                            <span class="bg-gradient-to-r from-amber-500 to-yellow-400 text-slate-950 font-cyber font-black text-[10px] tracking-wider uppercase px-3 py-1 rounded-full shadow-[0_0_12px_rgba(255,215,0,0.6)] flex items-center gap-1.5 group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-expand text-[9px]"></i> Preview Poster
+                            </span>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-cyber font-bold text-xs md:text-sm text-amber-100 uppercase tracking-wider">Official Tournament Farman & Poster</h4>
-                        <p class="text-[11px] text-amber-200/70 font-medium">Tap to view full high-resolution tournament flyer & announcements</p>
+
+                    <!-- Poster Info & Action CTA -->
+                    <div class="flex-1 text-center md:text-left space-y-2.5">
+                        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-red-600/35 via-amber-500/25 to-amber-600/35 border border-amber-400/70 rounded-full px-3.5 py-1 shadow-inner">
+                            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                            <span class="font-cyber text-[10px] tracking-widest uppercase font-bold text-amber-300">
+                                📜 Official Shahi Farman • Season 9 Flyer
+                            </span>
+                        </div>
+
+                        <h3 class="font-royal text-xl sm:text-2xl font-black text-amber-100 group-hover:text-amber-300 transition-colors tracking-wide leading-tight">
+                            TOURNAMENT OFFICIAL POSTER & MANIFESTO
+                        </h3>
+
+                        <p class="text-xs sm:text-sm text-amber-200/85 font-medium leading-relaxed max-w-xl">
+                            Unfold the high-resolution tournament manifesto, match schedules, captain protocols, and festival guidelines in full lightbox view.
+                        </p>
+
+                        <div class="pt-1 flex flex-wrap items-center justify-center md:justify-start gap-3">
+                            <span class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 via-amber-400 to-orange-500 text-slate-950 font-cyber font-black text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-[0_0_25px_rgba(255,140,0,0.55)] group-hover:shadow-[0_0_40px_rgba(255,215,0,0.9)] group-hover:scale-105 active:scale-95 transition-all">
+                                <i class="fa-solid fa-scroll text-sm"></i>
+                                <span>Unfold Full Resolution Poster</span>
+                                <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                            </span>
+                            <span class="text-[11px] font-cyber text-amber-300/90 font-bold flex items-center gap-1.5">
+                                <i class="fa-solid fa-certificate text-amber-400"></i> Full HD 4K View
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="font-cyber text-[10px] bg-amber-500/20 text-amber-200 px-3 py-1.5 rounded-lg border border-amber-400/50 font-bold uppercase tracking-wider flex items-center gap-1.5 shrink-0 ml-2 group-hover:bg-amber-500/35 transition-colors">
-                    <i class="fa-solid fa-expand text-[10px]"></i> <span>View Poster</span>
-                </div>
-            </button>
+            </div>
         </div>
     </header>
 
-    <!-- DIWALI GREETING BANNER (IMMEDIATELY BELOW HERO - CLICK TO LAUNCH DEEPOTSAV FIREWORKS) -->
+    <!-- DIWALI GREETING BANNER (CLICKABLE FIREWORKS) -->
     <section class="max-w-5xl mx-auto px-4 mt-5 relative z-20">
         <div onclick="launchCelebrationFireworks()" title="Tap to launch Deepotsav Fireworks!" class="royal-card-gold rounded-2xl p-4 sm:px-6 flex items-center justify-between gap-3 cursor-pointer hover:border-amber-300 transition-all">
-            <!-- Left Diya -->
             <div class="shrink-0 flex flex-col items-center">
                 <svg class="w-9 h-9" viewBox="0 0 64 64">
                     <path class="diya-flame" d="M32 6 C25 19, 23 28, 32 35 C41 28, 39 19, 32 6 Z" fill="url(#flameG)"/>
                     <path d="M10 35 Q32 56 54 35 Z" fill="#D4AF37" stroke="#FFF8E7" stroke-width="1.5"/>
                 </svg>
             </div>
-            <!-- Center Blessing Text -->
             <div class="text-center">
                 <p class="font-hindi text-xl sm:text-2xl text-amber-300 tracking-wide">
                     ✨ शुभ दीपावली • Deepotsav Blessings ✨
@@ -430,7 +458,6 @@
                     May Lord Shri Ram bless every player, every supporter and every family with victory, prosperity and light.
                 </p>
             </div>
-            <!-- Right Diya -->
             <div class="shrink-0 flex flex-col items-center">
                 <svg class="w-9 h-9" viewBox="0 0 64 64">
                     <path class="diya-flame" d="M32 6 C25 19, 23 28, 32 35 C41 28, 39 19, 32 6 Z" fill="url(#flameG)"/>
@@ -442,7 +469,6 @@
 
     <!-- PRIZE POOL & ORGANIZERS SUMMARY BAR -->
     <section class="max-w-6xl mx-auto px-4 mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 relative z-20">
-        <!-- Prize Box -->
         <div class="md:col-span-2 royal-card rounded-2xl p-4 flex flex-col justify-between">
             <h3 class="font-cyber text-xs tracking-wider text-amber-300/90 uppercase mb-3 flex items-center gap-2">
                 <i class="fa-solid fa-trophy text-amber-400"></i> Royal Treasury Rewards (Winners Only)
@@ -465,7 +491,6 @@
             </div>
         </div>
 
-        <!-- Static Contact Widget -->
         <div class="royal-card rounded-2xl p-4">
             <h3 class="font-cyber text-xs tracking-wider text-amber-300/90 uppercase mb-2.5 flex items-center gap-2">
                 <i class="fa-solid fa-phone text-amber-400"></i> Organiser's Contact
@@ -491,8 +516,8 @@
         </div>
     </section>
 
-    <!-- DECORATIVE GOLD INDIAN LINE-ART DIVIDER -->
-    <div class="max-w-4xl mx-auto px-4 my-6 flex items-center justify-center gap-3 opacity-85 relative z-20">
+    <!-- GOLD INDIAN LINE-ART DIVIDER -->
+    <div class="max-w-4xl mx-auto px-4 my-6 flex items-center justify-center gap-3 opacity-85 relative z-20 select-none">
         <span class="h-px flex-1 bg-gradient-to-r from-transparent via-amber-400 to-amber-500"></span>
         <svg class="w-8 h-8 text-amber-400 shrink-0" viewBox="0 0 64 64" fill="currentColor">
             <path d="M32 8 C26 20 20 26 8 32 C20 38 26 44 32 56 C38 44 44 38 56 32 C44 26 38 20 32 8 Z"/>
@@ -507,7 +532,6 @@
         <!-- SECTION 1: MATCHUP HUB & DYNAMIC POINTS TABLE -->
         <div id="fixtures-section" class="tab-content space-y-8 relative">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Brackets & Series Layout -->
                 <div class="lg:col-span-2 space-y-6">
                     <div class="flex items-center justify-between border-l-4 border-amber-400 pl-3">
                         <h2 class="font-royal font-cyber text-xl font-bold tracking-wide uppercase text-amber-300">
@@ -515,9 +539,8 @@
                         </h2>
                     </div>
 
-                    <!-- UPCOMING SEASON 9 TEST OPENER CARD (ROYAL INVITATION CARD + HANUMAN GADA WATERMARK + CHAKRA VS) -->
+                    <!-- UPCOMING SEASON 9 TEST OPENER CARD -->
                     <div class="royal-card-gold rounded-2xl p-4 sm:p-5 relative overflow-hidden">
-                        <!-- Optional diwali/hanuman-gada.png + Built-in Hanuman Gada Watermark -->
                         <img src="diwali/hanuman-gada.png" alt="" onerror="this.style.display='none'" class="absolute right-4 bottom-2 w-28 h-28 object-contain opacity-10 pointer-events-none">
                         <svg viewBox="0 0 120 120" class="absolute -right-2 -bottom-2 w-36 h-36 fill-amber-400/10 pointer-events-none rotate-12">
                             <circle cx="60" cy="36" r="24"/>
@@ -526,7 +549,6 @@
                             <rect x="56" y="60" width="8" height="52" rx="3"/>
                         </svg>
 
-                        <!-- Corner Diyas on Royal Invitation Card -->
                         <span class="absolute top-2 left-2 text-xs opacity-80">🪔</span>
                         <span class="absolute top-2 right-2 text-xs opacity-80">🪔</span>
 
@@ -543,9 +565,7 @@
                             </span>
                         </div>
                         
-                        <!-- 3-Column Season 9 Head-to-Head Alignment (Teams TBD) -->
                         <div class="bg-[#160606]/90 border border-amber-500/40 rounded-xl p-4 grid grid-cols-5 items-center gap-2 relative">
-                            <!-- Team 1 Side -->
                             <div class="col-span-2 flex flex-col items-center sm:items-end text-center sm:text-right overflow-hidden">
                                 <div class="w-12 h-12 rounded-xl bg-[#2B0A0A] border border-amber-500/50 p-1.5 mb-2 shadow flex items-center justify-center shrink-0">
                                     <img src="1.png" alt="Team 1 Logo" class="w-full h-full object-contain">
@@ -554,7 +574,6 @@
                                 <p class="text-[10px] text-amber-300/80 font-semibold mt-0.5">Capt: TBD</p>
                             </div>
 
-                            <!-- Centered Sacred Mandala Chakra VS Divider -->
                             <div class="col-span-1 flex flex-col items-center justify-center shrink-0">
                                 <div class="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
                                     <svg viewBox="0 0 100 100" class="chakra-spin absolute inset-0 w-full h-full">
@@ -574,7 +593,6 @@
                                 <span class="text-[9px] font-cyber text-amber-400 uppercase mt-1 tracking-wider font-bold">TEST</span>
                             </div>
 
-                            <!-- Team 2 Side -->
                             <div class="col-span-2 flex flex-col items-center sm:items-start text-center sm:text-left overflow-hidden">
                                 <div class="w-12 h-12 rounded-xl bg-[#2B0A0A] border border-amber-500/50 p-1.5 mb-2 shadow flex items-center justify-center shrink-0">
                                     <img src="2.png" alt="Team 2 Logo" class="w-full h-full object-contain">
@@ -585,7 +603,7 @@
                         </div>
                     </div>
 
-                    <!-- SEASON 8 OFFICIAL CHAMPIONS PODIUM (LEGIONS XI - CLICK FOR VICTORY FIREWORKS) -->
+                    <!-- SEASON 8 CHAMPIONS PODIUM -->
                     <div onclick="launchCelebrationFireworks()" title="Tap to celebrate Season 8 Champions!" class="bg-gradient-to-r from-[#4a0e0e] via-[#2B0A0A] to-[#4a0e0e] border-2 border-amber-400/70 rounded-2xl p-6 text-center relative overflow-hidden shadow-[0_0_35px_rgba(212,175,55,0.3)] cursor-pointer">
                         <div class="absolute -top-6 -right-6 w-24 h-12 bg-amber-500/15 rounded-full blur-2xl"></div>
                         <p class="font-cyber text-xs tracking-widest text-amber-300/90 uppercase font-bold mb-1">
@@ -617,7 +635,6 @@
                             </span>
                         </div>
 
-                        <!-- Match 1 -->
                         <div class="bg-black/40 border border-amber-500/25 rounded-xl p-3 flex items-center justify-between gap-3">
                             <div class="flex items-center gap-3 min-w-0">
                                 <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-400/40 font-cyber font-bold text-xs text-amber-300 flex items-center justify-center shrink-0">
@@ -633,7 +650,6 @@
                             </span>
                         </div>
 
-                        <!-- Match 2 -->
                         <div class="bg-black/40 border border-amber-500/25 rounded-xl p-3 flex items-center justify-between gap-3">
                             <div class="flex items-center gap-3 min-w-0">
                                 <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-400/40 font-cyber font-bold text-xs text-amber-300 flex items-center justify-center shrink-0">
@@ -649,7 +665,6 @@
                             </span>
                         </div>
 
-                        <!-- Match 3 -->
                         <div class="bg-gradient-to-r from-amber-950/60 via-black/50 to-black/50 border border-amber-400/50 rounded-xl p-3 flex items-center justify-between gap-3 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                             <div class="flex items-center gap-3 min-w-0">
                                 <div class="w-8 h-8 rounded-lg bg-amber-500/30 border border-amber-400/60 font-cyber font-black text-xs text-amber-200 flex items-center justify-center shrink-0">
@@ -668,7 +683,6 @@
                             </span>
                         </div>
 
-                        <!-- Match 4 (Forfeited) -->
                         <div class="bg-black/30 border border-red-500/25 rounded-xl p-3 flex items-center justify-between gap-3 opacity-80">
                             <div class="flex items-center gap-3 min-w-0">
                                 <div class="w-8 h-8 rounded-lg bg-red-500/15 border border-red-500/30 font-cyber font-bold text-xs text-red-400 flex items-center justify-center shrink-0">
@@ -684,7 +698,6 @@
                             </span>
                         </div>
 
-                        <!-- Match 5 (Not Required) -->
                         <div class="bg-black/20 border border-slate-800/50 rounded-xl p-3 flex items-center justify-between gap-3 opacity-55">
                             <div class="flex items-center gap-3 min-w-0">
                                 <div class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 font-cyber font-bold text-xs text-gray-500 flex items-center justify-center shrink-0">
@@ -702,19 +715,17 @@
                     </div>
                 </div>
 
-                <!-- Points Table (Preserved for Future / Standby) -->
+                <!-- Standings Table -->
                 <div class="space-y-4">
                     <h2 class="font-royal font-cyber text-xl font-bold tracking-wide uppercase text-orange-400 border-l-4 border-orange-500 pl-3">
                         NRR Standings Table
                     </h2>
                     
-                    <!-- Explanation Alert Banner -->
                     <div class="bg-orange-500/10 border border-amber-500/30 rounded-xl p-3 text-xs text-amber-100/90 leading-relaxed">
                         <strong class="text-amber-300 font-cyber block mb-1 uppercase"><i class="fa-solid fa-circle-info mr-1"></i> Standings Log:</strong>
                         Official wins, losses, points, and net run rates logged across competing squads will update below.
                     </div>
 
-                    <!-- Modern 6-Column Points Table Object -->
                     <div class="royal-card rounded-2xl overflow-hidden shadow-xl">
                         <div class="overflow-x-auto">
                             <table class="w-full text-left text-xs border-collapse min-w-[280px]">
@@ -761,7 +772,7 @@
             </div>
         </div>
 
-        <!-- SECTION 2: THE 3 SQUADS (ROYAL PALACE PLAQUES WITH CROWN & SILVER ORNAMENT) -->
+        <!-- SECTION 2: THE 3 SQUADS -->
         <div id="teams-section" class="tab-content hidden space-y-6">
             <div class="flex items-center justify-between border-l-4 border-amber-400 pl-3">
                 <h2 class="font-royal font-cyber text-xl font-bold tracking-wide uppercase text-amber-300">
@@ -773,7 +784,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Team 1: Royal Palace Plaque -->
+                <!-- Team 1 -->
                 <div class="royal-card palace-plaque rounded-2xl p-4 shadow-lg">
                     <div class="flex items-center gap-4 border-b border-amber-500/30 pb-3 mb-3">
                         <div class="team-logo-container w-14 h-14 bg-[#140505] border border-amber-400/50 rounded-xl flex items-center justify-center p-1 overflow-hidden shrink-0">
@@ -793,7 +804,6 @@
                             <span><i class="fa-solid fa-gem mr-1.5 text-slate-300"></i> 2. TBD</span>
                             <span class="font-cyber text-[9px] bg-slate-300/20 text-slate-200 px-1.5 py-0.5 rounded border border-slate-300/40 font-black uppercase tracking-wider">Vice - Captain</span>
                         </li>
-                        <!-- Lotus Separator -->
                         <li class="text-center text-[10px] text-amber-400/60 py-0.5">─── 🪷 ───</li>
                         <li class="bg-black/35 border border-amber-500/20 text-amber-100 px-2.5 py-1.5 rounded-lg flex justify-between"><span>3. TBD</span><span class="text-amber-400/60 text-[10px]">Player</span></li>
                         <li class="bg-black/35 border border-amber-500/20 text-amber-100 px-2.5 py-1.5 rounded-lg flex justify-between"><span>4. TBD</span><span class="text-amber-400/60 text-[10px]">Player</span></li>
@@ -808,7 +818,7 @@
                     </ul>
                 </div>
 
-                <!-- Team 2: Royal Palace Plaque -->
+                <!-- Team 2 -->
                 <div class="royal-card palace-plaque rounded-2xl p-4 shadow-lg">
                     <div class="flex items-center gap-4 border-b border-amber-500/30 pb-3 mb-3">
                         <div class="team-logo-container w-14 h-14 bg-[#140505] border border-amber-400/50 rounded-xl flex items-center justify-center p-1 overflow-hidden shrink-0">
@@ -828,7 +838,6 @@
                             <span><i class="fa-solid fa-gem mr-1.5 text-slate-300"></i> 2. TBD</span>
                             <span class="font-cyber text-[9px] bg-slate-300/20 text-slate-200 px-1.5 py-0.5 rounded border border-slate-300/40 font-black uppercase tracking-wider">Vice - Captain</span>
                         </li>
-                        <!-- Lotus Separator -->
                         <li class="text-center text-[10px] text-amber-400/60 py-0.5">─── 🪷 ───</li>
                         <li class="bg-black/35 border border-amber-500/20 text-amber-100 px-2.5 py-1.5 rounded-lg flex justify-between"><span>3. TBD</span><span class="text-amber-400/60 text-[10px]">Player</span></li>
                         <li class="bg-black/35 border border-amber-500/20 text-amber-100 px-2.5 py-1.5 rounded-lg flex justify-between"><span>4. TBD</span><span class="text-amber-400/60 text-[10px]">Player</span></li>
@@ -843,7 +852,7 @@
                     </ul>
                 </div>
 
-                <!-- Team 3: TBD (Season 9 Dormant Squad) -->
+                <!-- Team 3 -->
                 <div class="royal-card palace-plaque rounded-2xl p-4 shadow-lg opacity-80 hover:opacity-100">
                     <div class="flex items-center gap-4 border-b border-amber-500/30 pb-3 mb-3">
                         <div class="team-logo-container w-14 h-14 bg-[#140505] border border-amber-500/40 rounded-xl flex items-center justify-center p-1 overflow-hidden shrink-0">
@@ -879,7 +888,7 @@
             </div>
         </div>
 
-        <!-- SECTION 3: 34 PLAYER MASTER REGISTRY (RESET TO TBD FOR SEASON 9) -->
+        <!-- SECTION 3: 34 PLAYER MASTER REGISTRY -->
         <div id="registry-section" class="tab-content hidden space-y-6">
             <div class="flex items-center justify-between border-l-4 border-amber-400 pl-3">
                 <h2 class="font-royal font-cyber text-xl font-bold tracking-wide uppercase text-amber-300">
@@ -888,7 +897,6 @@
                 <span class="font-cyber text-xs bg-amber-500/15 border border-amber-400/40 px-3 py-1 rounded-full text-amber-200 font-bold">Total Players: 34</span>
             </div>
 
-            <!-- Modern Compact Matrix Grid for 34 Players -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 <script>
                     let registryHTML = '';
@@ -909,9 +917,8 @@
             </div>
         </div>
 
-        <!-- SECTION 4: HALL OF DIVINE GLORY (SEASON 8 OFFICIAL FINAL HONORS) -->
+        <!-- SECTION 4: HALL OF DIVINE GLORY -->
         <div id="stats-section" class="tab-content hidden space-y-8 relative">
-            <!-- Golden Lotus Background Watermark -->
             <img src="diwali/lotus.png" alt="" onerror="this.style.display='none'" class="absolute right-6 top-2 w-32 h-32 object-contain opacity-10 pointer-events-none">
 
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-l-4 border-amber-400 pl-3">
@@ -927,7 +934,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Leaderboard 1: Surya Trophy / Orange Cap (Batting Winner - Season 8 Final) -->
+                <!-- Batting Winner: Surya Trophy -->
                 <div class="royal-card temple-pillar-card rounded-2xl p-4 neon-border-orange relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-orange-500/20 text-orange-300 font-cyber text-[9px] tracking-widest font-black px-3 py-1 uppercase rounded-bl-xl border-l border-b border-orange-400/40">
                         Surya Trophy • Batting Winner
@@ -936,7 +943,6 @@
                         <h3 class="font-cyber font-bold text-sm text-orange-400 uppercase tracking-wider flex items-center gap-1.5">
                             <i class="fa-solid fa-crown text-amber-400"></i> Orange Cap Leaderboard
                         </h3>
-                        <!-- Column Header Labels -->
                         <div class="w-36 sm:w-40 grid grid-cols-3 text-right text-[10px] font-cyber text-amber-300/70 uppercase font-bold shrink-0">
                             <span>M</span>
                             <span>Avg</span>
@@ -944,7 +950,6 @@
                         </div>
                     </div>
                     <div class="space-y-1.5 text-xs">
-                        <!-- #1 Subu -->
                         <div class="bg-gradient-to-r from-orange-500/25 to-amber-500/10 border border-orange-400/50 rounded-xl p-2.5 flex items-center justify-between font-bold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-orange-400 shrink-0">#1</span>
@@ -956,7 +961,6 @@
                                 <span class="text-orange-400 font-black">107</span>
                             </div>
                         </div>
-                        <!-- #2 Rohit -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#2</span>
@@ -968,7 +972,6 @@
                                 <span class="text-amber-50 font-bold">87</span>
                             </div>
                         </div>
-                        <!-- #3 Asmit / Kunipua -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#3</span>
@@ -980,7 +983,6 @@
                                 <span class="text-amber-50 font-bold">79</span>
                             </div>
                         </div>
-                        <!-- #4 Chandan -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#4</span>
@@ -992,7 +994,6 @@
                                 <span class="text-amber-50 font-bold">38</span>
                             </div>
                         </div>
-                        <!-- #5 Jaddu -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#5</span>
@@ -1010,7 +1011,7 @@
                     </p>
                 </div>
 
-                <!-- Leaderboard 2: Astra Trophy / Purple Cap (Bowling Winner - Season 8 Final) -->
+                <!-- Bowling Winner: Astra Trophy -->
                 <div class="royal-card temple-pillar-card rounded-2xl p-4 neon-border-purple relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-amber-500/20 text-amber-300 font-cyber text-[9px] tracking-widest font-black px-3 py-1 uppercase rounded-bl-xl border-l border-b border-amber-400/40">
                         Astra Trophy • Bowling Winner
@@ -1019,7 +1020,6 @@
                         <h3 class="font-cyber font-bold text-sm text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
                             <i class="fa-solid fa-crown text-amber-400"></i> Purple Cap Leaderboard
                         </h3>
-                        <!-- Column Header Labels -->
                         <div class="w-40 sm:w-44 grid grid-cols-3 text-right text-[10px] font-cyber text-amber-300/70 uppercase font-bold shrink-0">
                             <span>M</span>
                             <span>Econ</span>
@@ -1027,7 +1027,6 @@
                         </div>
                     </div>
                     <div class="space-y-1.5 text-xs">
-                        <!-- #1 Lala -->
                         <div class="bg-gradient-to-r from-amber-500/25 to-purple-500/15 border border-amber-400/50 rounded-xl p-2.5 flex items-center justify-between font-bold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-300 shrink-0">#1</span>
@@ -1039,7 +1038,6 @@
                                 <span class="text-amber-300 font-black">13</span>
                             </div>
                         </div>
-                        <!-- #2 Subu -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#2</span>
@@ -1051,7 +1049,6 @@
                                 <span class="text-amber-50 font-bold">9</span>
                             </div>
                         </div>
-                        <!-- #3 Jaddu -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#3</span>
@@ -1063,7 +1060,6 @@
                                 <span class="text-amber-50 font-bold">3</span>
                             </div>
                         </div>
-                        <!-- #4 Babuma -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#4</span>
@@ -1075,7 +1071,6 @@
                                 <span class="text-amber-50 font-bold">3</span>
                             </div>
                         </div>
-                        <!-- #5 Rohit -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between font-semibold">
                             <div class="flex items-center gap-2 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 shrink-0">#5</span>
@@ -1093,7 +1088,7 @@
                     </p>
                 </div>
 
-                <!-- Leaderboard 3: Best Fielder -->
+                <!-- Best Fielder -->
                 <div class="royal-card temple-pillar-card rounded-2xl p-4 relative overflow-hidden">
                     <h3 class="font-cyber font-bold text-sm text-amber-300 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                         <i class="fa-solid fa-hand-fist text-amber-400"></i> Best Fielder Leaderboard
@@ -1128,13 +1123,12 @@
                     </div>
                 </div>
 
-                <!-- Leaderboard 4: Man Of The Tournament (Season 8 Final Winner) -->
+                <!-- Man Of The Tournament -->
                 <div class="royal-card temple-pillar-card rounded-2xl p-4 relative overflow-hidden">
                     <h3 class="font-cyber font-bold text-sm text-amber-300 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                         <i class="fa-solid fa-award text-amber-400"></i> Man Of The Tournament Ranking
                     </h3>
                     <div class="space-y-1.5 text-xs">
-                        <!-- #1 Subu -->
                         <div class="bg-gradient-to-r from-amber-500/25 to-amber-500/5 border border-amber-400/50 rounded-xl p-2.5 flex items-center justify-between">
                             <div class="flex items-center gap-2.5 truncate pr-2">
                                 <span class="font-cyber text-amber-300 font-black shrink-0">#1</span>
@@ -1150,7 +1144,6 @@
                             </div>
                         </div>
 
-                        <!-- #2 Lala -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between">
                             <div class="flex items-center gap-2.5 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 font-bold shrink-0">#2</span>
@@ -1166,7 +1159,6 @@
                             </div>
                         </div>
 
-                        <!-- #3 Rohit -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between">
                             <div class="flex items-center gap-2.5 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 font-bold shrink-0">#3</span>
@@ -1182,7 +1174,6 @@
                             </div>
                         </div>
 
-                        <!-- #4 Asmit / Kunipua -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between">
                             <div class="flex items-center gap-2.5 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 font-bold shrink-0">#4</span>
@@ -1198,7 +1189,6 @@
                             </div>
                         </div>
 
-                        <!-- #5 Jaddu -->
                         <div class="bg-black/40 border border-amber-500/20 rounded-xl p-2.5 flex items-center justify-between">
                             <div class="flex items-center gap-2.5 truncate pr-2">
                                 <span class="font-cyber text-amber-400/70 font-bold shrink-0">#5</span>
@@ -1217,13 +1207,12 @@
                 </div>
             </div>
 
-            <!-- Leaderboard 5: Final Fair Play Table Matrix (Season 8 Final) -->
+            <!-- Fair Play Table Matrix -->
             <div class="royal-card rounded-2xl p-4 space-y-3">
                 <h3 class="font-cyber font-bold text-sm text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
                     <i class="fa-solid fa-scale-balanced text-amber-400"></i> Dharma & Fair Play Discipline Ranking
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
-                    <!-- Legions XI -->
                     <div class="bg-black/45 border border-amber-400/40 text-amber-50 font-semibold rounded-xl p-3 flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-2.5">
                             <span class="font-cyber text-amber-400 font-bold">#1</span>
@@ -1232,7 +1221,6 @@
                         <span class="font-mono bg-amber-500/20 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded text-[11px] font-bold">30 Pts (10+10+10)</span>
                     </div>
 
-                    <!-- Ganapati Stars -->
                     <div class="bg-black/45 border border-amber-400/40 text-amber-50 font-semibold rounded-xl p-3 flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-2.5">
                             <span class="font-cyber text-amber-400 font-bold">#1</span>
@@ -1241,7 +1229,6 @@
                         <span class="font-mono bg-amber-500/20 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded text-[11px] font-bold">30 Pts (10+10+10)</span>
                     </div>
 
-                    <!-- Team 3 (Dormant) -->
                     <div class="bg-black/25 border border-slate-800/50 text-gray-500 font-semibold rounded-xl p-3 flex items-center justify-between opacity-60">
                         <div class="flex items-center gap-2.5">
                             <span class="font-cyber text-gray-600 font-bold">#3</span>
@@ -1253,7 +1240,7 @@
             </div>
         </div>
 
-        <!-- SECTION 5: ACCORDION INTERACTIVE RULES AND REGULATIONS (UPDATED FOR SEASON 9 TEST FORMAT) -->
+        <!-- SECTION 5: ACCORDION RULES AND REGULATIONS -->
         <div id="rules-section" class="tab-content hidden space-y-6">
             <div class="flex items-center justify-between border-l-4 border-amber-400 pl-3">
                 <h2 class="font-royal font-cyber text-xl font-bold tracking-wide uppercase text-amber-300">
@@ -1261,7 +1248,6 @@
                 </h2>
             </div>
             
-            <!-- Contextual Navigation Banner (Official Rulebook Link) -->
             <div class="royal-card-gold rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 bg-amber-500/15 border border-amber-400/40 rounded-xl flex items-center justify-center text-amber-300 shrink-0">
@@ -1278,7 +1264,6 @@
             </div>
 
             <div class="space-y-3 max-w-4xl">
-                <!-- Rule Item 1: Test Match Format -->
                 <div class="royal-card rounded-xl overflow-hidden">
                     <button onclick="toggleAccordion('rule-1')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-amber-100 hover:text-amber-300 flex justify-between items-center bg-black/35 transition-colors">
                         <span>1. Match Duration & Test Format Guidelines</span>
@@ -1291,7 +1276,6 @@
                     </div>
                 </div>
 
-                <!-- Rule Item 2 -->
                 <div class="royal-card rounded-xl overflow-hidden">
                     <button onclick="toggleAccordion('rule-2')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-amber-100 hover:text-amber-300 flex justify-between items-center bg-black/35 transition-colors">
                         <span>2. Official i10 Ball & Equipment</span>
@@ -1303,7 +1287,6 @@
                     </div>
                 </div>
 
-                <!-- Rule Item 3 -->
                 <div class="royal-card rounded-xl overflow-hidden">
                     <button onclick="toggleAccordion('rule-3')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-amber-100 hover:text-amber-300 flex justify-between items-center bg-black/35 transition-colors">
                         <span>3. Roster Constraints & Player Registry</span>
@@ -1316,7 +1299,6 @@
                     </div>
                 </div>
 
-                <!-- Rule Item 4 -->
                 <div class="royal-card rounded-xl overflow-hidden">
                     <button onclick="toggleAccordion('rule-4')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-amber-100 hover:text-amber-300 flex justify-between items-center bg-black/35 transition-colors">
                         <span>4. Net Run Rate & Standings Calculation</span>
@@ -1328,7 +1310,6 @@
                     </div>
                 </div>
 
-                <!-- Rule Item 5 -->
                 <div class="royal-card rounded-xl overflow-hidden">
                     <button onclick="toggleAccordion('rule-5')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-amber-100 hover:text-amber-300 flex justify-between items-center bg-black/35 transition-colors">
                         <span>5. Central Umpire Authority & Fair Play Points</span>
@@ -1344,21 +1325,32 @@
 
     </main>
 
-    <!-- FULLSCREEN POSTER MODAL (OPTION 3 LIGHTBOX) -->
-    <div id="poster-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 transition-all duration-300" onclick="closePosterModal(event)">
-        <div class="relative max-w-lg w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-            <button onclick="closePosterModal()" class="self-end mb-2 text-amber-200 hover:text-white font-cyber text-xs flex items-center gap-1.5 cursor-pointer bg-[#2B0A0A] hover:bg-amber-950 px-3.5 py-1.5 rounded-full border border-amber-400/50 shadow-md">
-                <span>Close</span> <i class="fa-solid fa-xmark text-sm"></i>
-            </button>
-            <div class="royal-card-gold rounded-2xl overflow-hidden p-1 shadow-[0_0_35px_rgba(212,175,55,0.4)]">
-                <img src="banner.png" alt="Tournament Poster" class="max-h-[80vh] w-auto object-contain rounded-xl">
+    <!-- FULLSCREEN POSTER MODAL (ROYAL SHAHI FARMAN LIGHTBOX) -->
+    <div id="poster-modal" class="fixed inset-0 z-50 bg-black/92 backdrop-blur-md hidden items-center justify-center p-3 sm:p-5 transition-all duration-300" onclick="closePosterModal(event)">
+        <div class="relative max-w-xl w-full max-h-[92vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <div class="w-full flex items-center justify-between mb-2.5 px-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm">🪔</span>
+                    <span class="font-royal text-xs sm:text-sm font-bold text-amber-300 uppercase tracking-widest">Official SRC Farman</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="banner.png" download="SRC_Season_9_Poster.png" class="text-amber-200 hover:text-white font-cyber text-xs flex items-center gap-1.5 bg-[#2B0A0A] hover:bg-amber-900/80 px-3 py-1.5 rounded-full border border-amber-400/50 shadow-md transition-all">
+                        <i class="fa-solid fa-download text-[11px]"></i> <span>Save</span>
+                    </a>
+                    <button onclick="closePosterModal()" class="text-amber-200 hover:text-white font-cyber text-xs flex items-center gap-1.5 cursor-pointer bg-[#2B0A0A] hover:bg-amber-900/80 px-3.5 py-1.5 rounded-full border border-amber-400/50 shadow-md transition-all">
+                        <span>Close</span> <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full royal-card-gold rounded-2xl overflow-hidden p-1.5 sm:p-2 border-2 border-amber-400 shadow-[0_0_50px_rgba(212,175,55,0.5)]">
+                <img src="banner.png" alt="Tournament Poster" class="max-h-[76vh] w-auto mx-auto object-contain rounded-xl">
             </div>
         </div>
     </div>
 
-    <!-- AYODHYA RAM MANDIR FESTIVAL BLESSINGS FOOTER (WITH EASTER EGG 2 AUTO-LIGHTING DIYA) -->
+    <!-- AYODHYA RAM MANDIR FESTIVAL BLESSINGS FOOTER -->
     <footer id="festival-footer" class="relative max-w-6xl mx-auto px-4 mt-14 mb-8 text-center border-t-2 border-amber-500/40 pt-8 text-xs text-amber-200/80 font-cyber tracking-wider space-y-3 overflow-hidden z-20">
-        <!-- Optional diwali/ram-mandir.png + Built-in Ram Mandir Silhouette -->
         <img src="diwali/ram-mandir.png" alt="" onerror="this.style.display='none'" class="mx-auto max-h-28 object-contain opacity-30 pointer-events-none">
         
         <!-- Easter Egg 2: Scroll-Activated Sacred Diya -->
@@ -1392,7 +1384,7 @@
         </p>
     </footer>
 
-    <!-- MOBILE-OPTIMIZED PERSISTENT NAVIGATION BAR (ROYAL DEEPOTSAV THEME) -->
+    <!-- MOBILE PERSISTENT BOTTOM NAVIGATION -->
     <nav class="fixed bottom-0 left-0 right-0 bg-[#160606]/95 backdrop-blur-md border-t border-amber-500/40 px-2 py-2 z-40 shadow-[0_-8px_25px_rgba(0,0,0,0.8)]">
         <div class="max-w-md mx-auto flex items-center justify-between text-amber-200/70 font-semibold text-[11px] uppercase tracking-wider font-cyber">
             
@@ -1424,7 +1416,7 @@
         </div>
     </nav>
 
-    <!-- CONTROLLER JAVASCRIPT & DIWALI DIVINE INTERACTIVE ENGINE -->
+    <!-- CONTROLLER JAVASCRIPT & FESTIVAL INTERACTION ENGINE -->
     <script>
         // 1. Tab Engine Controller Switching
         function switchTab(targetSectionId, clickedButton) {
@@ -1445,7 +1437,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 2. Accordion Animation Component Engine
+        // 2. Accordion Component Engine
         function toggleAccordion(panelElementId) {
             const targetPanel = document.getElementById(panelElementId);
             const targetChevronIcon = document.getElementById('icon-' + panelElementId);
@@ -1459,12 +1451,16 @@
             }
         }
 
-        // 3. Poster Lightbox Modal Controls
+        // 3. Poster Modal Controls & Sparkle Blast
         function openPosterModal() {
             const modal = document.getElementById('poster-modal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             document.body.classList.add('overflow-hidden');
+            
+            if (typeof createFireworkBurst === 'function') {
+                createFireworkBurst(window.innerWidth / 2, window.innerHeight * 0.35);
+            }
         }
 
         function closePosterModal() {
@@ -1474,7 +1470,7 @@
             document.body.classList.remove('overflow-hidden');
         }
 
-        // 4. EASTER EGG 1: Tap Logo 7 Times -> Shankh Naad Sound + Golden Aura + "जय श्री राम"
+        // 4. Easter Egg 1: Tap Logo 7 Times -> Shankh Naad Sound + "जय श्री राम"
         let logoTapCount = 0;
         let logoTapTimer = null;
 
@@ -1484,7 +1480,6 @@
                 const ctx = new AudioCtx();
                 const now = ctx.currentTime;
 
-                // Resonant Conch (Shankh) Harmonic Synthesis
                 [293.66, 440, 587.33].forEach((freq, idx) => {
                     const osc = ctx.createOscillator();
                     const gain = ctx.createGain();
@@ -1527,7 +1522,7 @@
             }
         }
 
-        // 5. EASTER EGG 2: Scroll to Bottom -> Sacred Diya Ignites Automatically
+        // 5. Easter Egg 2: Scroll to Footer -> Sacred Diya Ignites Automatically
         const footerObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1547,7 +1542,7 @@
 
         footerObserver.observe(document.getElementById('festival-footer'));
 
-        // 6. EASTER EGG 3: Long-Press Tournament Title -> Marigold & Rose Petal Shower
+        // 6. Easter Egg 3: Long-Press Title -> Petal Shower
         let titlePressTimer = null;
         function startTitlePress() {
             titlePressTimer = setTimeout(() => {
@@ -1573,7 +1568,7 @@
             }
         }
 
-        // 7. AMBIENT GOLDEN PARTICLES & ROYAL FIREWORKS CANVAS ENGINE (GOLD, SAFFRON, CRIMSON)
+        // 7. Ambient Embers & Royal Fireworks Engine
         const canvas = document.getElementById('deepotsav-canvas');
         const ctx = canvas.getContext('2d');
         let cw = canvas.width = window.innerWidth;
@@ -1584,7 +1579,6 @@
             ch = canvas.height = window.innerHeight;
         });
 
-        // Floating Golden Embers
         const embers = Array.from({ length: 38 }, () => ({
             x: Math.random() * cw,
             y: Math.random() * ch,
@@ -1595,7 +1589,6 @@
             color: ['#D4AF37', '#FF8C00', '#FFB347', '#FFF8E7'][Math.floor(Math.random() * 4)]
         }));
 
-        // Fireworks Sparks (Triggered only on page load, greeting click, or championship click)
         let sparks = [];
         function createFireworkBurst(x, y) {
             const palette = ['#FFD700', '#D4AF37', '#FF8C00', '#FFB347', '#DC2626', '#FFF8E7'];
@@ -1627,7 +1620,6 @@
         function animateDeepotsavCanvas() {
             ctx.clearRect(0, 0, cw, ch);
 
-            // Draw gentle floating golden embers
             embers.forEach(e => {
                 e.x += e.vx;
                 e.y += e.vy;
@@ -1646,12 +1638,11 @@
                 ctx.restore();
             });
 
-            // Draw occasional firework sparks
             for (let i = sparks.length - 1; i >= 0; i--) {
                 const s = sparks[i];
                 s.x += s.vx;
                 s.y += s.vy;
-                s.vy += 0.04; // subtle gravity
+                s.vy += 0.04;
                 s.alpha -= s.decay;
 
                 if (s.alpha <= 0) {
@@ -1674,7 +1665,6 @@
         }
 
         animateDeepotsavCanvas();
-        // Welcome Deepotsav Firework Salute on First Load
         window.addEventListener('load', () => {
             setTimeout(launchCelebrationFireworks, 450);
         });
